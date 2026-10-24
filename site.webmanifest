@@ -1,0 +1,10 @@
+{
+  "name": "Savora Restaurant",
+  "short_name": "Savora",
+  "description": "Seasonal cooking, open-fire kitchen and delivery.",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#0e1311",
+  "theme_color": "#0e1311",
+  "icons": [{"src": "assets/img/favicon.svg", "sizes": "any", "type": "image/svg+xml"}]
+}

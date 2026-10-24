@@ -1,0 +1,76 @@
+/* ==========================================================================
+   SAVORA - 07 REFINEMENTS
+   Polish, accessibility and print. Loaded last so it can safely override.
+   ========================================================================== */
+::selection{background:var(--gold);color:var(--gold-ink)}
+.light ::selection{background:var(--ink);color:var(--cream)}
+
+/* Custom scrollbar (desktop) */
+@media (hover:hover) and (pointer:fine){
+  ::-webkit-scrollbar{width:11px}
+  ::-webkit-scrollbar-track{background:var(--bg)}
+  ::-webkit-scrollbar-thumb{background:#2a352f;border-radius:99px;border:3px solid var(--bg)}
+  ::-webkit-scrollbar-thumb:hover{background:var(--gold)}
+}
+
+/* Better tap behaviour on touch devices */
+a,button{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+input,select,textarea{font-size:max(16px,1rem)} /* prevents iOS zoom on focus */
+
+/* Sharper images and safe areas on notched phones */
+img{image-rendering:auto}
+.header{padding-left:env(safe-area-inset-left);padding-right:env(safe-area-inset-right)}
+.footer{padding-bottom:calc(30px + env(safe-area-inset-bottom))}
+
+/* Light sections: keep contrast */
+.light h2,.light h3{color:var(--ink)}
+.light .eyebrow{color:#7a5c24}
+.light .eyebrow::before{background:#7a5c24}
+.light .btn-gold{background:var(--ink);color:var(--cream)}
+.light .btn-gold:hover{background:#2c332f}
+
+/* Form validation hints */
+.field input:user-invalid,.field textarea:user-invalid{border-color:#b86a6a}
+
+/* High contrast & reduced motion */
+@media (prefers-contrast:more){
+  :root{--muted:#cfd6d0;--line:rgba(255,255,255,.28)}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
+  .rv{opacity:1;transform:none}
+  .marquee-track{animation:none}
+}
+
+/* Print */
+@media print{
+  .header,.to-top,.marquee,.cta-wrap,.burger,.menu-backdrop,.news{display:none!important}
+  body{background:#fff;color:#000}
+  section,.alt,.light{background:#fff!important;color:#000!important;padding:24px 0}
+  .rv{opacity:1!important;transform:none!important}
+  a{color:#000;text-decoration:underline}
+}
+
+/* v1.1.2 - accessibility: contrast on light sections, touch targets (WCAG 2.5.8) */
+.light em.gold{color:#7a5c24}
+.footer li a,.copy nav a{display:inline-block;padding:5px 0;min-height:24px}
+.footer .news-note+.news+.form-ok{margin-top:14px}
+
+/* v1.2.0 - Moroccan accent: subtle zellige star pattern on page headers, stats band and call-to-action */
+.stats{position:relative;overflow:hidden}
+.page-hero::before,.cta-box::before,.stats::before{content:"";position:absolute;inset:0;background:var(--zellige) center/72px 72px repeat;opacity:.07;pointer-events:none;-webkit-mask-image:linear-gradient(180deg,#000,transparent 85%);mask-image:linear-gradient(180deg,#000,transparent 85%)}
+.page-hero>.container,.cta-box>*,.stats>.container{position:relative;z-index:1}
+.menu-note{text-align:center;margin-top:44px;font-size:.92rem}
+@media print{.page-hero::before,.cta-box::before,.stats::before{display:none}}
+
+/* v1.3.0 - language switch (English <-> Arabic) */
+.lang-switch{border:1px solid var(--line);border-radius:999px;padding:6px 14px!important;font-size:.8rem!important;text-transform:none!important;letter-spacing:.02em}
+.lang-switch::after{display:none!important}
+@media (max-width:1024px){.nav-links a.lang-switch{width:auto!important;border-bottom:1px solid var(--line)!important;margin-top:14px;padding:10px 20px!important}}
+
+/* v1.3.0 - language switch (English / Arabic) */
+.nav-links a.lang-switch{border:1px solid var(--line);border-radius:999px;padding:6px 16px;font-size:.82rem;letter-spacing:.04em;text-transform:none;color:var(--text);white-space:nowrap}
+.nav-links a.lang-switch::after{display:none}
+.nav-links a.lang-switch:hover{border-color:var(--gold);color:var(--gold)}
+@media (max-width:1024px){.nav-links a.lang-switch{width:auto;align-self:flex-start;margin-top:14px;padding:10px 20px;font-size:.95rem;border-bottom:1px solid var(--line)}}

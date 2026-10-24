@@ -1,0 +1,52 @@
+/* ==========================================================================
+   SAVORA - 01 VARIABLES
+   Design tokens. Change the brand here and the whole site follows.
+   ========================================================================== */
+:root{
+  /* Colors */
+  --bg:#0e1311;
+  --bg-2:#131a17;
+  --card:#18211d;
+  --line:rgba(255,255,255,.09);
+  --text:#efe9df;
+  --muted:#a3ada5;
+  --gold:#c9a66b;
+  --gold-2:#e6cd9a;
+  --gold-ink:#1a1510;      /* text on gold buttons */
+  --cream:#f4eee3;         /* light sections */
+  --ink:#1b201d;           /* text on light sections */
+  --success:#6e8b74;
+
+  /* Typography */
+  --font-head:'Playfair Display',Georgia,'Times New Roman',serif;
+  --font-body:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  --fs-base:16px;
+  --fs-h1:clamp(2.5rem,6.2vw,5.4rem);
+  --fs-h2:clamp(1.9rem,4vw,3.2rem);
+  --fs-h3:clamp(1.15rem,1.6vw,1.4rem);
+  --lh-body:1.65;
+
+  /* Layout */
+  --max:1200px;
+  --gutter:clamp(18px,4vw,32px);
+  --section-y:clamp(64px,9vw,110px);
+  --header-h:76px;
+
+  /* Shape & depth */
+  --radius:18px;
+  --radius-lg:28px;
+  --shadow-card:0 30px 50px -30px rgba(0,0,0,.7);
+  --shadow-gold:0 14px 30px -10px rgba(201,166,107,.55);
+
+  /* Motion */
+  --ease:cubic-bezier(.22,.8,.24,1);
+  --dur:.45s;
+
+  /* Layers */
+  --z-header:100;
+  --z-menu:110;
+  --z-top:90;
+}
+
+/* Moroccan accent: zellige-style eight-point star tile (used in refinements.css). Set to none to disable. */
+:root{--zellige:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='72' height='72' viewBox='0 0 72 72'%3E%3Cg fill='none' stroke='%23c9a66b' stroke-width='1.2'%3E%3Crect x='18' y='18' width='36' height='36'/%3E%3Crect x='18' y='18' width='36' height='36' transform='rotate(45 36 36)'/%3E%3Ccircle cx='36' cy='36' r='6'/%3E%3C/g%3E%3Cg fill='%23c9a66b'%3E%3Ccircle cx='0' cy='0' r='2'/%3E%3Ccircle cx='72' cy='0' r='2'/%3E%3Ccircle cx='0' cy='72' r='2'/%3E%3Ccircle cx='72' cy='72' r='2'/%3E%3C/g%3E%3C/svg%3E")}

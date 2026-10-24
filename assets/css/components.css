@@ -1,0 +1,130 @@
+/* ==========================================================================
+   SAVORA - 03 COMPONENTS
+   Reusable UI blocks: buttons, cards, forms, tabs, accordion, tags...
+   ========================================================================== */
+
+/* Icons (inline SVG injected by icons.js) */
+.ic{width:1.25em;height:1.25em;stroke:currentColor;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;flex:none}
+
+/* Text helpers */
+.eyebrow{display:inline-flex;align-items:center;gap:10px;text-transform:uppercase;letter-spacing:.22em;font-size:.74rem;color:var(--gold);font-weight:600;margin-bottom:18px}
+.eyebrow::before{content:"";width:34px;height:1px;background:var(--gold)}
+.muted{color:var(--muted)}
+em.gold{font-style:italic;color:var(--gold)}
+
+/* Logo */
+.logo{display:inline-flex;align-items:center}
+.logo img{height:44px;width:auto}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:14px 30px;border-radius:999px;font-weight:600;font-size:.92rem;letter-spacing:.02em;border:1px solid transparent;transition:transform var(--dur) var(--ease),background var(--dur),border-color var(--dur),color var(--dur),box-shadow var(--dur);text-align:center}
+.btn-gold{background:var(--gold);color:var(--gold-ink)}
+.btn-line{border-color:rgba(255,255,255,.35);color:var(--text)}
+.light .btn-line{border-color:rgba(0,0,0,.3);color:var(--ink)}
+.btn .ic{transition:transform var(--dur) var(--ease)}
+
+/* Placeholder / image frame */
+.ph{position:relative;overflow:hidden;background:linear-gradient(135deg,#2a3a31,#141b18 70%);display:flex;align-items:center;justify-content:center;color:rgba(201,166,107,.45)}
+.ph .ic{width:56px;height:56px;stroke-width:1.1}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .9s var(--ease)}
+.ph.v2{background:linear-gradient(135deg,#4a3a28,#1c1712 75%)}
+.ph.v3{background:linear-gradient(135deg,#2b3340,#12161c 75%)}
+.ph.v4{background:linear-gradient(135deg,#3d2a2a,#181212 75%)}
+
+/* Cards */
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:clamp(26px,3vw,36px) clamp(22px,2.5vw,30px);transition:transform var(--dur) var(--ease),border-color var(--dur),box-shadow var(--dur)}
+.card .ico{width:60px;height:60px;border-radius:16px;background:rgba(201,166,107,.12);color:var(--gold);display:flex;align-items:center;justify-content:center;margin-bottom:24px;transition:.4s}
+.card .ico .ic{width:28px;height:28px}
+.card h3{margin-bottom:10px}
+.card p{color:var(--muted);font-size:.95rem}
+
+/* Dish card */
+.dish{border-radius:var(--radius);overflow:hidden;background:var(--card);border:1px solid var(--line);transition:transform var(--dur) var(--ease),border-color var(--dur)}
+.dish .ph{height:clamp(200px,24vw,260px)}
+.dish-body{padding:26px}
+.dish-top{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.dish-body p{color:var(--muted);font-size:.92rem;margin-top:8px}
+.price{font-family:var(--font-head);color:var(--gold);font-size:1.4rem;white-space:nowrap}
+.tag{display:inline-flex;align-items:center;gap:6px;font-size:.72rem;text-transform:uppercase;letter-spacing:.14em;color:var(--gold);margin-top:16px}
+.tag .ic{width:15px;height:15px}
+
+/* Check list */
+.checks{margin:30px 0 38px;display:grid;gap:14px}
+.checks li{display:flex;gap:12px;align-items:center;font-weight:500}
+.checks .ic{color:var(--gold);background:rgba(201,166,107,.15);border-radius:50%;padding:5px;width:28px;height:28px}
+
+/* Floating badge */
+.badge-float{position:absolute;left:-10px;bottom:70px;background:rgba(24,33,29,.92);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border:1px solid var(--line);padding:16px 20px;border-radius:16px;display:flex;gap:14px;align-items:center;z-index:2}
+.badge-float .ic{color:var(--gold);width:28px;height:28px}
+.badge-float b{display:block;font-size:.95rem}
+.badge-float small{color:var(--muted)}
+
+/* Stars & slider dots */
+.stars{display:flex;gap:4px;justify-content:center;margin:26px 0 14px;color:var(--gold)}
+.stars .ic{fill:currentColor;width:18px;height:18px}
+.dots{display:flex;gap:10px;justify-content:center;margin-top:36px}
+.dots button{width:10px;height:10px;border-radius:99px;border:0;background:rgba(255,255,255,.25);transition:.4s;padding:0;position:relative}
+.dots button::after{content:"";position:absolute;inset:-12px}
+.dots button.on{width:34px;background:var(--gold)}
+
+/* FAQ accordion */
+.faq-item{border-bottom:1px solid var(--line)}
+.faq-q{width:100%;background:none;border:0;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:24px 0;text-align:left;font-family:var(--font-head);font-size:clamp(1.05rem,2vw,1.2rem)}
+.faq-q .ic{color:var(--gold);transition:transform .4s var(--ease)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .5s var(--ease)}
+.faq-a p{padding:0 0 26px;color:var(--muted)}
+
+/* Tabs */
+.tab{padding:12px 26px;border-radius:99px;border:1px solid var(--line);background:none;font-weight:500;white-space:nowrap;transition:.35s}
+.tab.on{background:var(--gold);color:var(--gold-ink);border-color:var(--gold)}
+
+/* Menu item */
+.m-item{display:grid;grid-template-columns:96px minmax(0,1fr);gap:22px;align-items:center;padding-bottom:26px;border-bottom:1px solid var(--line);transition:transform var(--dur) var(--ease)}
+.m-item.hide{display:none}
+.m-item .ph{width:96px;height:96px;border-radius:50%}
+.m-item .ph .ic{width:34px;height:34px}
+.m-head{display:flex;align-items:baseline;gap:12px}
+.m-head h3{font-size:1.2rem}
+.m-head i{flex:1;border-bottom:1px dashed rgba(255,255,255,.2);transform:translateY(-4px);min-width:12px}
+.m-item p{color:var(--muted);font-size:.9rem;margin-top:4px}
+
+/* Team card */
+.team-card{text-align:center}
+.team-card .ph{height:clamp(260px,30vw,340px);border-radius:var(--radius)}
+.team-card h3{margin-top:20px}
+.team-card span{color:var(--gold);font-size:.85rem;letter-spacing:.1em;text-transform:uppercase}
+
+/* Forms */
+.form-card{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:clamp(24px,4vw,44px)}
+.form-title{font-size:clamp(1.5rem,3vw,1.8rem);margin-bottom:26px}
+.form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.form-card .btn{margin-top:26px}
+.field{display:flex;flex-direction:column;gap:8px;min-width:0}
+.field.full{grid-column:1/-1}
+.field label{font-size:.78rem;text-transform:uppercase;letter-spacing:.14em;color:var(--muted)}
+.field input,.field select,.field textarea{background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:14px;padding:15px 18px;outline:0;transition:.3s;width:100%;min-height:50px;font-size:1rem}
+.field select option{background:#18211d;color:var(--text)}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--gold);background:rgba(201,166,107,.06)}
+.field textarea{min-height:140px;resize:vertical}
+.form-ok{display:none;margin-top:20px;padding:16px 20px;border-radius:14px;background:rgba(110,139,116,.2);border:1px solid rgba(110,139,116,.5);align-items:center;gap:12px}
+.form-ok.show{display:flex}
+
+/* Info rows */
+.info-row{display:flex;gap:18px;padding:26px;border:1px solid var(--line);border-radius:var(--radius);background:var(--card);transition:transform var(--dur) var(--ease),border-color var(--dur)}
+.info-row .ico{width:52px;height:52px;border-radius:14px;background:rgba(201,166,107,.12);color:var(--gold);display:flex;align-items:center;justify-content:center;flex:none}
+.info-row h3{font-size:1.1rem;margin-bottom:4px}
+.info-row p{color:var(--muted);font-size:.93rem}
+.info-row .grow{flex:1;min-width:0}
+.hours li{display:flex;justify-content:space-between;gap:12px;border-bottom:1px dashed var(--line);padding:9px 0;color:var(--muted)}
+.hours b{color:var(--text);font-weight:500;text-align:right}
+
+/* Social & newsletter */
+.socials{display:flex;gap:12px}
+.socials a{width:44px;height:44px;border-radius:50%;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;transition:.35s}
+.news{display:flex;margin-top:6px;border:1px solid var(--line);border-radius:99px;overflow:hidden}
+.news input{flex:1;min-width:0;background:none;border:0;padding:14px 18px;outline:0}
+.news button{border:0;background:var(--gold);color:var(--gold-ink);padding:0 20px;min-width:52px}
+.news-note{font-size:.93rem;margin-bottom:16px}
+
+/* Breadcrumbs */
+.crumbs{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:18px;color:var(--muted);font-size:.9rem}

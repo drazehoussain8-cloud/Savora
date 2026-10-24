@@ -1,0 +1,34 @@
+SAVORA TEMPLATE - LICENSE AGREEMENT
+
+Copyright (c) 2026 Draze Housain. All rights reserved.
+
+This license is provided in good faith. If you need legal certainty for your country, have it reviewed by a legal professional.
+
+1. REGULAR LICENSE (one project)
+By purchasing this template you receive a non-exclusive, non-transferable license to use it for ONE (1) end product, for yourself or for ONE client. You may:
+  - Modify the code, colors, text and images to fit the end product.
+  - Use the end product commercially (for example a restaurant website).
+
+2. YOU MAY NOT
+  - Resell, redistribute, sublicense or share this template, modified or not, as a template, theme, UI kit or any similar product, free or paid.
+  - Upload it to any marketplace or file-sharing site.
+  - Use one license for more than one end product or more than one client.
+  - Claim the original design or code as your own template product.
+
+3. EXTENDED LICENSE
+Using the template in an end product that is sold to many users (for example a SaaS or a website builder), or for multiple end products, requires an Extended License or one Regular License per end product. Contact drazehoussain8@gmail.com.
+
+4. THIRD-PARTY ITEMS
+Fonts and icons keep their own licenses, listed in THIRD-PARTY-LICENSES.md. The photographs in assets/img/ are sample images generated with AI. They are included for demonstration and preview only. Replace them with your own photos or properly licensed images before publishing your final website. You are responsible for having the rights to every image you use.
+
+5. OWNERSHIP
+All rights not expressly granted remain with the author.
+
+6. NO WARRANTY
+The template is provided "as is", without warranty of any kind. The author is not liable for any damages arising from its use.
+
+7. SUPPORT & UPDATES
+Support and updates are provided as described on the product page where you purchased it.
+
+8. TERMINATION
+The license ends automatically if you breach these terms.
